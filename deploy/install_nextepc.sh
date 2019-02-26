@@ -4,7 +4,7 @@ check_host_domain (){
     localhost_domain=$(cat /etc/hosts | grep "$1")
     hostname=$(cat /etc/hostname)
     echo "$localhost_domain" | grep -q "$hostname"
-    if [[ $? -ne 0 ]]; then
+    if [ $? -ne 0 ]; then
         hostname_domain=$(echo "$localhost_domain $hostname")
         sudo sed -i "s/$localhost_domain/$hostname_domain/g" /etc/hosts
     fi
