@@ -81,4 +81,4 @@ cat ../nextepc.conf > ./install/etc/nextepc/nextepc.conf
 ./nextepc-epcd &
 
 #WebUI installation
-./setup_webui.sh
+sh ../setup_webui.sh
