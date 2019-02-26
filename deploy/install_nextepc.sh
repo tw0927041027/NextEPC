@@ -62,8 +62,8 @@ sudo systemctl enable systemd-networkd
 sudo systemctl restart systemd-networkd
 
 #compile
-tar zxvf ./nextepc.tar.gz
-cd nextepc
+tar zxvf /NextEPC/deploy/nextepc.tar.gz -C /NextEPC/deploy
+cd /NextEPC/deploy/nextepc
 autoreconf -iv
 ./configure --prefix=`pwd`/install
 make -j `nproc`
