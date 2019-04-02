@@ -27,8 +27,6 @@ apt-get install -y \
 
 apt-get clean 
 
-git clone https://github.com/tw0927041027/OpenStack-Tacker-CoreNetwork
-
 wget https://dl.google.com/go/go1.11.4.linux-amd64.tar.gz
 tar -C /usr/local -xzf go1.11.4.linux-amd64.tar.gz
 export GOROOT=/usr/local/go
@@ -45,5 +43,6 @@ autoreconf -iv
 make -j `nproc`
 make install
 rm -rf install/etc/free5gc/*.conf && rm -rf install/etc/free5gc/freeDiameter/*.conf
-grep -r "mongodb://localhost" | awk -F : '{print $1}' | xargs -i sed -i 's/localhost/mongodb-svc/g' {}
+grep -r "mongodb://localhost" | awk -F : '{print $1}' | xargs -i sed -i 's/localhost/mongodb/g' {}
 cp /OpenStack-Tacker-CoreNetwork/deploy/free5gc/free5gc.conf /free5gc/install/etc/free5gc/free5gc.conf
+echo 192.188.2.100 mongodb >> /etc/hosts 
