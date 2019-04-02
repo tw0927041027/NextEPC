@@ -28,7 +28,7 @@ topology_template:
         image: ubuntu16.04
         key_name: mykey
         flavor: m1.small
-        availability_zone: nova:jerry-ceph-osd-5
+        availability_zone: nova
         mgmt_driver: noop
         config: |
           param0: key1
@@ -79,7 +79,7 @@ topology_template:
     VL2:
       type: tosca.nodes.nfv.VL
       properties:
-        network_name: net_nextepc
+        network_name: net_free5gc
         vendor: Tacker
 
     FIP1:

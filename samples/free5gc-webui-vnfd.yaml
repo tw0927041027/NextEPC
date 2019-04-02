@@ -82,7 +82,7 @@ topology_template:
     VL2:
       type: tosca.nodes.nfv.VL
       properties:
-        network_name: net_nextepc
+        network_name: net_free5gc
         vendor: Tacker
 
     FIP1:
