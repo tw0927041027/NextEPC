@@ -1,5 +1,5 @@
 # Kubernetes VIM Exercise
-=========================
+
 ## OpenStack Controller and Kubernetes Master
 
 ### Install Kubernetes Using Kubeadm
