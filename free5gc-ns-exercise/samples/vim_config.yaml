@@ -1,0 +1,7 @@
+auth_url: 'http://10.0.1.18:35357/v3'
+username: 'admin'
+password: 'dH0sumIc6Y7Iyuti8hT78uC1NMKg0RKsBv2pH1d7'
+project_name: 'admin'
+project_domain_name: 'Default'
+user_domain_name: 'Default'
+cert_verify: 'False'
