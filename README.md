@@ -1,1 +1,0 @@
-# OpenStack-Tacker-Exercise

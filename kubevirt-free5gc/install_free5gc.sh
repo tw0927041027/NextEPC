@@ -36,13 +36,10 @@ go get -u -v "github.com/gorilla/mux"
 go get -u -v "golang.org/x/net/http2"
 go get -u -v "golang.org/x/sys/unix"
 git clone https://bitbucket.org/nctu_5g/free5gc.git
-
+git clone https://github.com/tw0927041027/OpenStack-Tacker-Exercise -b kubevirt
 cd /free5gc
 autoreconf -iv
 ./configure --prefix=`pwd`/install
 make -j `nproc`
 make install
-rm -rf install/etc/free5gc/*.conf && rm -rf install/etc/free5gc/freeDiameter/*.conf
 grep -r "mongodb://localhost" | awk -F : '{print $1}' | xargs -i sed -i 's/localhost/mongodb/g' {}
-cp /OpenStack-Tacker-Exercise/free5gc-ns-exercise/deploy/free5gc/free5gc.conf /free5gc/install/etc/free5gc/free5gc.conf
-echo 192.188.2.100 mongodb >> /etc/hosts 
