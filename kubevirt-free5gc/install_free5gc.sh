@@ -37,7 +37,7 @@ go get -u -v "golang.org/x/net/http2"
 go get -u -v "golang.org/x/sys/unix"
 
 git clone https://bitbucket.org/nctu_5g/free5gc-stage-1.git
-cd /free5gc
+cd /OpenStack-Tacker-Exercise/kubevirt-free5gc/free5gc-stage-1
 autoreconf -iv
 ./configure --prefix=`pwd`/install
 make -j `nproc`
