@@ -27,11 +27,12 @@ apt-get install -y \
 
 apt-get clean 
 
-wget -q https://storage.googleapis.com/golang/getgo/installer_linux
-chmod +x /installer_linux
-sh -c /installer_linux
-source ~/.bash_profile
-rm -f /installer_linux
+wget https://dl.google.com/go/go1.11.4.linux-amd64.tar.gz
+tar -C /usr/local -xzf /go1.11.4.linux-amd64.tar.gz
+echo "GOROOT=/usr/local/go" >> ~/.bashrc
+echo "GOROOT=/root/go" >> ~/.bashrc
+echo "PATH=$PATH:/usr/local/go/bin" >> ~/.bashrc
+source ~/.bashrc
 go get -u -v "github.com/gorilla/mux"
 go get -u -v "golang.org/x/net/http2"
 go get -u -v "golang.org/x/sys/unix"
