@@ -33,9 +33,7 @@ echo "GOROOT=/usr/local/go" >> ~/.bashrc
 echo "GOROOT=/root/go" >> ~/.bashrc
 echo "PATH=$PATH:/usr/local/go/bin" >> ~/.bashrc
 source ~/.bashrc
-go get -u -v "github.com/gorilla/mux"
-go get -u -v "golang.org/x/net/http2"
-go get -u -v "golang.org/x/sys/unix"
+go get -u -v "github.com/gorilla/mux" && go get -u -v "golang.org/x/net/http2" && go get -u -v "golang.org/x/sys/unix"
 
 git clone https://bitbucket.org/nctu_5g/free5gc-stage-1.git
 cd /free5gc-stage-1
