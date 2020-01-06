@@ -29,7 +29,7 @@ apt-get clean
 
 wget -q https://storage.googleapis.com/golang/getgo/installer_linux
 chmod +x /installer_linux
-/installer_linux
+sh -c /installer_linux
 source ~/.bash_profile
 rm -f /installer_linux
 go get -u -v "github.com/gorilla/mux"
