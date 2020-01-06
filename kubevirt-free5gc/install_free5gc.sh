@@ -31,7 +31,7 @@ wget -q https://storage.googleapis.com/golang/getgo/installer_linux
 chmod +x /installer_linux
 /installer_linux
 source ~/.bash_profile
-rm -f installer_linux
+rm -f /installer_linux
 go get -u -v "github.com/gorilla/mux"
 go get -u -v "golang.org/x/net/http2"
 go get -u -v "golang.org/x/sys/unix"
