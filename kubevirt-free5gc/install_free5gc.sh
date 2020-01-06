@@ -35,13 +35,7 @@ echo "PATH=$PATH:/usr/local/go/bin" >> ~/.bashrc
 source ~/.bashrc
 go get -u -v "github.com/gorilla/mux" && go get -u -v "golang.org/x/net/http2" && go get -u -v "golang.org/x/sys/unix"
 
-git clone https://bitbucket.org/nctu_5g/free5gc-stage-1.git
-cd /free5gc-stage-1
-autoreconf -iv
-./configure --prefix=`pwd`/install
-make -j `nproc`
-make install
-grep -r "mongodb://localhost" | awk -F : '{print $1}' | xargs -i sed -i 's/localhost/mongodb/g' {}
+git clone https://bitbucket.org/nctu_5g/free5gc-stage-1.git && cd /free5gc-stage-1 && autoreconf -iv && ./configure --prefix=`pwd`/install && make -j `nproc` && make install && grep -r "mongodb://localhost" | awk -F : '{print $1}' | xargs -i sed -i 's/localhost/mongodb/g' {}
 cd /OpenStack-Tacker-Exercise/kubevirt-free5gc
 cp ./free5gc.conf /free5gc-stage-1/install/etc/free5gc/
 cp ./amf.conf /free5gc-stage-1/install/etc/free5gc/freeDiameter/
